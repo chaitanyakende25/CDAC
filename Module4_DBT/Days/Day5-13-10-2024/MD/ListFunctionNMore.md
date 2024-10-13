@@ -71,7 +71,7 @@ set x = least(a,b,c,d);
 
 # MySQL - SQL - CASE keyword
 
-![alt text](/Images/EmpTable1.png)
+![alt text](Images/EmpTable1.png)
 
 ```sql
 select
@@ -131,7 +131,7 @@ end "DEPTNUMBER"
 from emp;
 ```
 
-![alt text](/Images/OutPut1.png)
+![alt text](Images/OutPut1.png)
 
 ```sql
 if deptno = 10 then HRA = 40% annual
@@ -163,7 +163,7 @@ from emp
 order by 2; --order by 2 column
 ```
 
-![alt text](/Images/OutPut2.png)
+![alt text](Images/OutPut2.png)
 
 # MySQL - SQL - Environment Functions
 
@@ -177,7 +177,7 @@ show character set;
 
 MySQL - SQL - Group/Aggregate Functions
 
-![alt text](/Images/EmpTable2.png)
+![alt text](Images/EmpTable2.png)
 
 ## Single-Row Functions:-
 
@@ -194,11 +194,11 @@ MySQL - SQL - Group/Aggregate Functions
 select sum(sal) from emp;
 35000
 select internal work
-![alt text](/Images/InternalWork1.png)
+![alt text](Images/InternalWork1.png)
 only sal column load in RAM and put in into array AND only total i.e 35000 will send to client, then RAM will free
 
 Assumption, 4th row SAL is null:-
-![alt text](/Images/InternalWork2.png)
+![alt text](Images/InternalWork2.png)
 
 ```sql
 select sum(sal) from emp; -- NULL VALUES ARE NOT COUNTED BY GROUP FUNCTIONS
@@ -259,7 +259,7 @@ select avg(ifnull(sal,0)) from emp; --SLOW it goes two times in loop first for c
 ```
 
 Assumption, 4th row SAL is 9000: -
-![alt text](/Images/InternalWork3.png)
+![alt text](Images/InternalWork3.png)
 
 ```sql
 select sum(sal) from emp
@@ -267,7 +267,7 @@ where deptno = 1;
 18000
 ```
 
-![alt text](/Images/InternalWork4.png)
+![alt text](Images/InternalWork4.png)
 
 ```sql
 select avg(sal) from emp
@@ -305,7 +305,7 @@ variance(column)
 select count(\*), min(sal), max(sal), sum(sal), avg(sal) from emp;
 ```
 
-![alt text](/Images/Output3.png)
+![alt text](Images/Output3.png)
 
 ## Restriction #1:-
 
@@ -371,14 +371,14 @@ Besides the Group function Whichever column is present in SELECT clause, it has 
 select deptno, sum(sal) from emp; -- ERROR
 ```
 
-![alt text](/Images/Output4.png)
+![alt text](Images/Output4.png)
 
 ```sql
 select deptno, sum(sal) from emp
 group by deptno;
 ```
 
-![alt text](/Images/Output5.png)
+![alt text](Images/Output5.png)
 
 ## Rule #2:-
 
@@ -389,7 +389,7 @@ select sum(sal) from emp
 group by deptno;
 ```
 
-![alt text](/Images/Output6.png)
+![alt text](Images/Output6.png)
 
 ```sql
 select deptno, sum(sal) from emp
@@ -408,7 +408,7 @@ select deptno, count(\*) from emp
 group by deptno;
 ```
 
-![alt text](/Images/Output7.png)
+![alt text](Images/Output7.png)
 
 - 2D query -> any SELECT statement with a GROUP BY clause is known as a 2D query, because you can plot a graph from the output
 
@@ -463,9 +463,9 @@ select job, deptno, sum(sal) from emp
 group by job, deptno;
 ```
 
-![alt text](/Images/LoopWork1.png)
+![alt text](Images/LoopWork1.png)
 outer loop should with less number of iterration and inner should be more for faster excution in any lang in nested loop
-![alt text](/Images/LoopWork2.png)
+![alt text](Images/LoopWork2.png)
 
 ```sql
 select
@@ -491,7 +491,7 @@ select deptno, sum(sal) from emp
 group by deptno;
 ```
 
-![alt text](/Images/Output8.png)
+![alt text](Images/Output8.png)
 
 ```sql
 select deptno, sum(sal) from emp
@@ -499,8 +499,8 @@ group by deptno
 having sum(sal) > 17000;
 ```
 
-![alt text](/Images/Output9.png)
-![alt text](/Images/InternalWork5.png)
+![alt text](Images/Output9.png)
+![alt text](Images/InternalWork5.png)
 
 - WHERE clause is used for searching
 - searching takes place in DB Server HD
@@ -519,7 +519,7 @@ group by deptno
 having sal > 7000; <-ERROR
 ```
 
-![alt text](/Images/InternalWork6.png)
+![alt text](Images/InternalWork6.png)
 
 - Whichever column is present in SELECT clause, it can be used in HAVING clause
 
@@ -568,7 +568,7 @@ group by deptno
 order by 1;
 ```
 
-![alt text](/Images/Output10.png)
+![alt text](Images/Output10.png)
 
 In Other RDBMS:- 7.4
 
@@ -580,14 +580,14 @@ select deptno, sum(sal) from emp
 group by deptno;
 ```
 
-![alt text](/Images/Output11.png)
+![alt text](Images/Output11.png)
 
 ```sql
 select max(sum(sal)) from emp -- NESTING OF GROUP FUNCTIONS IS SUPPORTED BY ORACLE
 group by deptno;
 ```
 
-![alt text](/Images/Output12.png)
+![alt text](Images/Output12.png)
 
 In MySQL:-
 
@@ -596,7 +596,7 @@ In MySQL:-
 group by deptno;
 ```
 
-![alt text](/Images/Output13.png)
+![alt text](Images/Output13.png)
 
 ```sql
 select max(sum_sal) from
@@ -604,5 +604,5 @@ select max(sum_sal) from
 group by deptno) abcd;
 ```
 
-![alt text](/Images/Output14.png)
-![alt text](/Images/Output15.png)
+![alt text](Images/Output14.png)
+![alt text](Images/Output15.png)
