@@ -4,6 +4,7 @@
 
 - foundation of RDBMS based on set theory
 - founder of RDBMS -> Dr. E. F. Codd (1968)
+
   ![alt text](Images/Tables1.png)
 
 ```sql
