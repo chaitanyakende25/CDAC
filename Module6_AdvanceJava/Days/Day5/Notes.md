@@ -1,0 +1,1 @@
+Between constructor and init() server config object will be created.

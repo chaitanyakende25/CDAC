@@ -1,0 +1,10 @@
+create table SALESPEOPLE (Snum int(4), Sname varchar(10), City varchar(10), Comm float(3,2)); 
+desc salespeople;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| Snum  | int         | YES  |     | NULL    |       |
+| Sname | varchar(10) | YES  |     | NULL    |       |
+| City  | varchar(10) | YES  |     | NULL    |       |
+| Comm  | float(3,2)  | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
