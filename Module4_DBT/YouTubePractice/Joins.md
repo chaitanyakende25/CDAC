@@ -2,12 +2,12 @@
 
 ## Entity Relations
 
-![alt text](/Images/Realations.png)
+![alt text](Images/Realations.png)
 
 - To avoid redundancy of the data, data should be organized into multiple
   tables so that tables are related to each other.
 - The relations can be one of the following
-  ![alt text](/Images/Realations2.png)
+  ![alt text](Images/Realations2.png)
 - Entity relations is outcome of Normalization process.
 
 ## SQL Joins
@@ -72,7 +72,7 @@ INSERT INTO emp_meeting VALUES (300, 4);
 
 ## CROSS JOIN
 
-![alt text](/Images/crossJoin.png)
+![alt text](Images/crossJoin.png)
 
 ```sql
 SELECT ename, dname FROM emps CROSS JOIN depts;
@@ -90,7 +90,7 @@ SELECT e.ename, d.dname FROM emps e CROSS JOIN depts d;
 SELECT e.ename, d.dname FROM emps e , depts d;
 ```
 
-![alt text](/Images/crossJoin2.png)
+![alt text](Images/crossJoin2.png)
 
 - Compares each row of Tablel with every row of Table2.
 - Yields all possible combinations of Table1 and Table2.
@@ -105,7 +105,7 @@ SELECT e.ename, d.dname FROM depts d CROSS JOIN emps e;
 
 ## Inner Join
 
-![alt text](/Images/innerJoin.png)
+![alt text](Images/innerJoin.png)
 
 ```sql
 SELECT e.ename, d.dname FROM emps e INNER JOIN depts d ON e.deptno=d.deptno;
@@ -114,4 +114,4 @@ SELECT e.ename, d.dname FROM emps e INNER JOIN depts d ON e.deptno=d.deptno;
 - The inner JOIN is used to return rows from both tables that satisfy the join condition.
 - Non-matchin rows from both tables are skipped.
 - If join condition contains equality check, it is referred as equi-join; otherwise it is non-equi-join.
-  ![alt text](/Images/innerJoin2.png)
+  ![alt text](Images/innerJoin2.png)
